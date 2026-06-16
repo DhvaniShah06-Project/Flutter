@@ -1,12 +1,10 @@
-//WAP to calculate BMI using weight (pounds) and height (inches).
-// Formula: BMI = (Weight × 703) / (Height)2
+//A. WAP to check whether a given number is even or odd using conditional operator.
 import "dart:io";
 
-void main(){
-  stdout.write("Enter weight in (pounds) : ");
-  int pounds = int.parse(stdin.readLineSync()!);
-  stdout.write("Enter height in (inches) :");
-  int height = int.parse(stdin.readLineSync()!);
-  double bmi = (pounds*703)/(height*height);
-  print("BMI = $bmi");
+void main() {
+  stdout.write("Enter number : ");
+  int a = int.parse(stdin.readLineSync()!);
+  stdout.write("Enter number : ");
+  int b = int.parse(stdin.readLineSync()!);
+  (a > b) ? print("$a is Greatest") : print("$b is Greatest");
 }

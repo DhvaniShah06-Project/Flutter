@@ -1,7 +1,13 @@
-//WAP to print your name, enrollment number and branch in console.
+//A. WAP to check whether a given number is positive, negative or zero.
+import "dart:io";
 
 void main() {
-  print("Name : Dhvani");
-  print("ENrollment : 24010101257");
-  print("Branch : CSE");
+  stdout.write("Enter number : ");
+  int n = int.parse(stdin.readLineSync()!);
+  if (n == 0)
+    print("$n is zero");
+  else if (n > 0)
+    print("$n is positive");
+  else
+    print("$n is negative");
 }

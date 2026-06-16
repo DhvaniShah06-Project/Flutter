@@ -1,4 +1,4 @@
-//B. WAP to accept marks of 5 subjects and determine whether the student is pass or fail according to passing criteria.
+//A. WAP to calculate percentage and display class obtained using nested if-else.
 import "dart:io";
 
 void main() {
@@ -16,5 +16,13 @@ void main() {
   int sum = s1 + s2 + s3 + s4 + s5;
   double per = sum / 5;
   print("Percentage : ${sum / 5}");
-  per >= 35 ? print("Pass") : print("Fail");
+
+  if (per >= 90)
+    print("$per Grade : A");
+  else if (per >= 70)
+    print("$per Grade : B");
+  else if (per >= 35)
+    print("$per Grade C");
+  else
+    print("$per Fail");
 }
