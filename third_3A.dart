@@ -1,10 +1,17 @@
-//A. WAP to calculate percentage of 5 subjects and display total marks, percentage and grade.
-// Formula: Percentage = (Total Obtained Marks / Total Marks) × 100
+//A. WAP to generate Fibonacci series up to N numbers using loop.
 
 import "dart:io";
 
 void main(){
-  int f= int.parse(stdin.readLineSync()!);
-  double c = ((f-32)*(5/9));
-  print("Fahrenheit to Celsius  : $c");
+  stdout.write("Enter number : ");
+  int n = int.parse(stdin.readLineSync()!);
+  int  i = 0, c, a = 0, b = 1;
+  stdout.write("0 1 ");
+  for (i = 0; i < n-2; i++)
+  {
+    c = a + b;
+    stdout.write("$c ");
+    a = b;
+    b = c;
+  }
 }

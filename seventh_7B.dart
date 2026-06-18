@@ -1,20 +1,25 @@
-//B. WAP to accept marks of 5 subjects and determine whether the student is pass or fail according to passing criteria.
+//B. WAP to check whether a given number is Armstrong number or not.
+
 import "dart:io";
+import "dart:math";
 
 void main() {
-  stdout.write("Enter Subject 1 marks : ");
-  int s1 = int.parse(stdin.readLineSync()!);
-  stdout.write("Enter Subject 2 marks : ");
-  int s2 = int.parse(stdin.readLineSync()!);
-  stdout.write("Enter Subject 3 marks : ");
-  int s3 = int.parse(stdin.readLineSync()!);
-  stdout.write("Enter Subject 4 marks : ");
-  int s4 = int.parse(stdin.readLineSync()!);
-  stdout.write("Enter Subject 5 marks : ");
-  int s5 = int.parse(stdin.readLineSync()!);
-  print("Total Marks : ${s1 + s2 + s3 + s4 + s5}");
-  int sum = s1 + s2 + s3 + s4 + s5;
-  double per = sum / 5;
-  print("Percentage : ${sum / 5}");
-  per >= 35 ? print("Pass") : print("Fail");
+  stdout.write("Enter number : ");
+  int n = int.parse(stdin.readLineSync()!);
+  int temp = n, rem, digit = 0;
+  num sum = 0;
+  while (n != 0) {
+    digit++;
+    n ~/= 10;
+  }
+  n = temp;
+  while (temp != 0) {
+    rem = temp % 10;
+    sum += pow(rem, digit);
+    temp ~/= 10;
+  }
+  if (sum == n)
+    stdout.write("$n is Armstrong");
+  else
+    stdout.write("$n is not Armstrong");
 }
