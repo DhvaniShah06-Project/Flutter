@@ -1,22 +1,13 @@
-//A. WAP to find largest and smallest element from a List.
+//A. WAP to create and use anonymous function for addition of two numbers.
 
-import "dart:io";
+import 'dart:io';
 
 void main() {
-  List<int> l = [];
-  stdout.write("Enter number : ");
-  int n = int.parse(stdin.readLineSync()!);
-  for (int i = 0; i < n; i++) {
-    stdout.write("Enter number : ");
-    int value = int.parse(stdin.readLineSync()!);
-    l.add(value);
-  }
-  int min = l[0], max = l[0];
-  for (int i = 0; i < n; i++) {
-    if (l[i] > max)
-      max = l[i];
-    else if (l[i] < min)
-      min = l[i];
-  }
-  print("Minimum : $min\nMaximum $max");
+  stdout.write("Enter a number: ");
+  int n1 = int.parse(stdin.readLineSync()!);
+  stdout.write("Enter a number: ");
+  int n2 = int.parse(stdin.readLineSync()!);
+  () {
+    print("Sum : ${n1 + n2}");
+  }();
 }

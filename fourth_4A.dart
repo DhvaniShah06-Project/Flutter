@@ -1,11 +1,12 @@
-//A. WAP to create a List of integer numbers and display all elements using loop.
+//A. WAP to use map() function to multiply all List elements by 2.
 
-import "dart:io";
-
-void main(){
-  List <int> arr= [1,2,3,4,5];
-  // for (int i in arr){
-  //   stdout.write("$i ");
-  // }
-  //print(arr);
+void main() {
+  Map<String, dynamic> stu_1 = {
+    "name": "Dhvani",
+    "gender": "Female",
+    "city": "Rajkot",
+  };
+  List<int> l2 = [1, 2, 3, 4, 5];
+  List<int> multipliedNumbers = l2.map((num) => num * 2).toList();
+  print(multipliedNumbers);
 }

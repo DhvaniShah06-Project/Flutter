@@ -1,10 +1,11 @@
-//A. WAP to check whether a given number is even or odd using conditional operator.
-import "dart:io";
+//A. WAP to create an arrow function to calculate square of a number.
+
+import 'dart:io';
 
 void main() {
-  stdout.write("Enter number : ");
-  int a = int.parse(stdin.readLineSync()!);
-  stdout.write("Enter number : ");
-  int b = int.parse(stdin.readLineSync()!);
-  (a > b) ? print("$a is Greatest") : print("$b is Greatest");
+  stdout.write("Enter a number: ");
+  int n = int.parse(stdin.readLineSync()!);
+
+  var square = (int a) => a * a;
+  print("Square of $n is: ${square(n)}");
 }
