@@ -1,13 +1,13 @@
-//A. WAP to create and use anonymous function for addition of two numbers.
+//A. WAP to create a function with default parameter values.
 
-import 'dart:io';
+void demo_Default_Parameter({
+  required String name,
+  int? age,
+  String? College = "Darshan University",
+}) {
+  print("Name : $name\nAge : $age\nCollege : $College");
+}
 
 void main() {
-  stdout.write("Enter a number: ");
-  int n1 = int.parse(stdin.readLineSync()!);
-  stdout.write("Enter a number: ");
-  int n2 = int.parse(stdin.readLineSync()!);
-  () {
-    print("Sum : ${n1 + n2}");
-  }();
+  demo_Default_Parameter(name: "Dhvani", age: 20);
 }

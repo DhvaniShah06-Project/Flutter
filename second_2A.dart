@@ -1,13 +1,20 @@
-//A. WAP to add, update and remove elements from a Map.
+//A. WAP to create a function to check whether a number is prime or not.
+
+import "dart:io";
+
+int isPrime(int n) {
+  int i = 2;
+  for (; i <= n / 2; i++) {
+    if (n % i == 0) return 0;
+  }
+  return 1;
+}
 
 void main() {
-  Map<String, dynamic> stu = {"name": "Dhvani", "age": 20, "gender": "Female"};
-  //add
-  stu["city"] = "Rajkot";
-  //update
-  stu["age"] = 18;
-  //delete
-  stu.remove("age");
-
-  print(stu);
+  stdout.write("Enter number : ");
+  int n = int.parse(stdin.readLineSync()!);
+  if (isPrime(n) == 1)
+    print("$n is Prime");
+  else
+    print("$n is not Prime");
 }

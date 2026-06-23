@@ -1,11 +1,10 @@
-//A. WAP to check whether a given key exists in Map or not.
+//A. WAP to create a function with optional positional parameters.
+
+void demo_Positioonal(String name, [String? College]) {
+  print("Name: $name");
+  print("College: $College");
+}
 
 void main() {
-  Map<String, dynamic> stu_1 = {
-    "name": "Dhvani",
-    "gender": "Female",
-    "city": "Rajkot",
-  };
-  print(stu_1.containsKey("age"));
-  print(stu_1.containsKey("city"));
+  demo_Positioonal("Dhvani");
 }

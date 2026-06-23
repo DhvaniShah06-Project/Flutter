@@ -1,19 +1,22 @@
-//B. WAP to calculate sum and average of all List elements.
+//B. WAP to pass List as parameter in function and return largest element from List.
+
 import "dart:io";
 
-void main() {
-  List<int> l1 = [];
-  stdout.write("Enter number : ");
-  int n = int.parse(stdin.readLineSync()!);
-  for (int i = 0; i < n; i++) {
-    stdout.write("Enter number : ");
-    int value = int.parse(stdin.readLineSync()!);
-    l1.add(value);
+int largest_List_Element(List<int> l) {
+  int max_num = l[0];
+  for (int i = 0; i < l.length; i++) {
+    if (l[i] > max_num) max_num = l[i];
   }
-  int sum = 0;
-  for (int i = 0; i < n; i++) {
-    sum += l1[i];
-  }
-  print("Sum : $sum\nAverage : ${sum/n}");
+  return max_num;
+}
 
+void main() {
+  stdout.write("Enter size : ");
+  int n = int.parse(stdin.readLineSync()!);
+  List<int> li = [];
+  for (int i = 0; i < n; i++) {
+    stdout.write("Enter List Element : ");
+    li.add(int.parse(stdin.readLineSync()!));
+  }
+  print("Largest List Element : ${largest_List_Element(li)}");
 }
