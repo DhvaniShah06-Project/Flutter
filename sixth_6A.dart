@@ -1,11 +1,29 @@
-//A. WAP to create an arrow function to calculate square of a number.
+//A. WAP to create an Animal class with method sound() and override it in Dog and Cat classes to
+// demonstrate runtime polymorphism.
 
-import 'dart:io';
+class Animal {
+  void sound() {
+    print("Animal Speaking from Animal Class");
+  }
+}
+
+class Dog extends Animal {
+  void sound() {
+    print("Dog Speaking from Dog Class");
+  }
+}
+
+class Cat extends Animal {
+  void sound() {
+    print("Cat Speaking from Cat Class");
+  }
+}
 
 void main() {
-  stdout.write("Enter a number: ");
-  int n = int.parse(stdin.readLineSync()!);
-
-  var square = (int a) => a * a;
-  print("Square of $n is: ${square(n)}");
+  Animal a1 = Animal();
+  Animal a2 = Dog();
+  Animal a3 = Cat();
+  a1.sound();
+  a2.sound();
+  a3.sound();
 }

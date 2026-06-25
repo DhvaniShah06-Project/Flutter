@@ -1,20 +1,23 @@
-//A. WAP to create a function to check whether a number is prime or not.
+//A.  WAP to create a Rectangle class and calculate area using constructor.
+// Formula: Area = Length × Width
 
 import "dart:io";
 
-int isPrime(int n) {
-  int i = 2;
-  for (; i <= n / 2; i++) {
-    if (n % i == 0) return 0;
+class Rectangle {
+  double length, width;
+
+  Rectangle(this.length, this.width);
+
+  double area() {
+    return length * width;
   }
-  return 1;
 }
 
 void main() {
-  stdout.write("Enter number : ");
-  int n = int.parse(stdin.readLineSync()!);
-  if (isPrime(n) == 1)
-    print("$n is Prime");
-  else
-    print("$n is not Prime");
+  stdout.write("Enter Length : ");
+  double l = double.parse(stdin.readLineSync()!);
+  stdout.write("Enter Width : ");
+  double w = double.parse(stdin.readLineSync()!);
+  Rectangle r1 = Rectangle(l, w);
+  print("Area : : ${r1.area()}");
 }

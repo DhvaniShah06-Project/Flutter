@@ -1,13 +1,30 @@
-//A. WAP to create a function with default parameter values.
+//A. WAP to demonstrate single inheritance using Person and Student classes.
 
-void demo_Default_Parameter({
-  required String name,
-  int? age,
-  String? College = "Darshan University",
-}) {
-  print("Name : $name\nAge : $age\nCollege : $College");
+class Person {
+  String? name;
+  int? age;
+  String Gender;
+
+  Person(this.name, this.age, this.Gender);
+
+  void display() {
+    print("Name : $name\nAge : $age\nGender : $Gender");
+  }
+}
+
+class Student_Final extends Person {
+  int? marks;
+
+  Student_Final(String? name, int? age, String Gender, this.marks)
+    : super(name, age, Gender);
+
+  void display() {
+    super.display();
+    print("Marks : $marks");
+  }
 }
 
 void main() {
-  demo_Default_Parameter(name: "Dhvani", age: 20);
+  Student_Final s1 = Student_Final("Dhvani", 20, "Female", 90);
+  s1.display();
 }

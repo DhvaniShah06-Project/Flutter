@@ -1,10 +1,20 @@
-//A. WAP to create a function with optional positional parameters.
+//A. WAP to demonstrate default constructor and parameterized constructor.
 
-void demo_Positioonal(String name, [String? College]) {
-  print("Name: $name");
-  print("College: $College");
+class Parameterized {
+  String? name;
+
+  Parameterized(this.name);
+}
+
+class Default {
+  String? name;
+
+  Default() : name = "Guest";
 }
 
 void main() {
-  demo_Positioonal("Dhvani");
+  Parameterized d1 = Parameterized("Dhvani");
+  Default d2 = Default();
+  print("PARAMETERIZED CONSTRUCTOR ${d1.name}");
+  print("Default Constructor ${d2.name}");
 }

@@ -1,14 +1,19 @@
-//A. WAP to create a function for addition of two numbers and call it from main().
+//A. WAP to create a Student class with data members and member functions.
 import "dart:io";
 
-int add(int a, int b) {
-  return a + b;
+class Student {
+  String? name;
+  int? age;
+  int? marks;
+
+  Student(this.name, this.age, this.marks);
+
+  void display() {
+    print("Name : $name\nAge : $age\nMarks : $marks");
+  }
 }
 
 void main() {
-  stdout.write("Enter a number: ");
-  int n1 = int.parse(stdin.readLineSync()!);
-  stdout.write("Enter a number: ");
-  int n2 = int.parse(stdin.readLineSync()!);
-  print("Sum : ${add(n1, n2)}");
+  Student s1 = Student('Dhvani', 20, 90);
+  s1.display();
 }
